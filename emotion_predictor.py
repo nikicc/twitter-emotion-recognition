@@ -9,13 +9,14 @@ from keras.preprocessing import sequence
 
 
 class EmotionPredictor:
-    def __init__(self, classification, setting):
+    def __init__(self, classification, setting, use_unison_model=True):
         """
-
         Args:
             classification (str): Either 'ekman', 'plutchik', 'poms'
                 or 'unison'.
             setting (str): Either 'mc' or 'ml'.
+            use_unison_model (bool): Whether to use unison model;
+                else use single model.
         """
         if classification not in ['ekman', 'plutchik', 'poms', 'unison']:
             raise ValueError('Unknown emotion classification: {}'.format(
@@ -25,6 +26,7 @@ class EmotionPredictor:
 
         self.classification = classification
         self.setting = setting
+        self.use_unison_model = use_unison_model
         self.model = self._get_model()
         self.embeddings_model = self._get_embeddings_model()
         self.char_to_ind = self._get_char_mapping()
@@ -32,8 +34,12 @@ class EmotionPredictor:
         self.max_len = self._get_max_sequence_length()
 
     def _get_model(self):
-        return load_model('models/{}-{}.h5'.format(
-            self.classification, self.setting))
+        self._loaded_model_filename = 'models/{}{}-{}.h5'.format(
+            'unison-' if self.use_unison_model else '',
+            self.classification,
+            self.setting,
+        )
+        return load_model(self._loaded_model_filename)
 
     def _get_embeddings_model(self):
         last_layer_output = K.function([self.model.layers[0].input,
@@ -57,10 +63,10 @@ class EmotionPredictor:
                     'Confusion']
 
     def _get_max_sequence_length(self):
-        if self.classification in ['ekman', 'plutchik']:
-            return 141
-        elif self.classification == 'poms':
+        if self.use_unison_model or self.classification == 'poms':
             return 143
+        elif self.classification in ['ekman', 'plutchik']:
+            return 141
 
     def predict_classes(self, tweets):
         indices = self._tweet_to_indices(tweets)
