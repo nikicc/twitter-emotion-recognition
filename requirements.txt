@@ -1,2 +1,2 @@
 pandas
-keras
+keras==1.1.0
