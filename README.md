@@ -68,3 +68,9 @@ If you would rather just use the final hidden state representation call `embedd`
 * __*demo.py*__: script is showing how to use our models for predicting emotions or embedding tweets.
 * __*emotion_prediction.py*__: helper scripts that defines EmotionPredictor class.
 * __*models/*__: contains trained RNN models.
+
+### Citing:
+
+If you use our models in a scientific publication, we would appreciate citations to the following paper:
+
+*Colnerič, N., & Demšar, J. (2018). Emotion Recognition on Twitter: Comparative Study and Training a Unison Model. IEEE Transactions on Affective Computing, PP (99), 1. https://doi.org/10.1109/TAFFC.2018.2807817* 
