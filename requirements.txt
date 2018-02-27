@@ -1,2 +1,3 @@
 pandas
 keras==1.1.0
+theano==0.8.2
