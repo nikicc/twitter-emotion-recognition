@@ -51,9 +51,9 @@ To observe probabilities for each class use `predict_probabilities` method:
 4                                  My mom wasn't mad  0.063969  0.004990  0.013971  0.079884  0.218708  0.618478
 5  Do people have no Respect for themselves or yo...  0.070003  0.801428  0.067724  0.003646  0.038480  0.018718
 ```
-If you would rather just use the final hidden state representation call `embedd`:
+If you would rather just use the final hidden state representation call `embed`:
 ```python
->>> model.embedd(tweets)
+>>> model.embed(tweets)
                                                Tweet      Dim1      Dim2    ...       Dim798    Dim799    Dim800
 0  Watching the sopranos again from start to finish! -0.128762 -0.000000    ...    -0.260896 -0.009062 -0.110209
 1  Finding out i have to go to the  dentist tomorrow -0.525602  0.407847    ...    -0.000088 -0.001489  0.142871

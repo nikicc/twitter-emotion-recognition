@@ -92,7 +92,7 @@ class EmotionPredictor:
             df[emotion] = values
         return df
 
-    def embedd(self, tweets):
+    def embed(self, tweets):
         indices = self._tweet_to_indices(tweets)
         embeddings = self.embeddings_model(indices)
 
@@ -100,6 +100,10 @@ class EmotionPredictor:
         for index, values in enumerate(embeddings.T, start=1):
             df['Dim{}'.format(index)] = values
         return df
+
+    def embedd(self, tweets):
+        """ Here only for backwards compatibility. """
+        return self.embed(tweets)
 
     def _tweet_to_indices(self, tweets):
         indices = []
