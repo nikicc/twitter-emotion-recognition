@@ -1,9 +1,11 @@
 # Twitter Emotion Recognition
 
-    ***Update*** This repo has been updated to include:
-    1. A requirements.txt file that creates a working environment (tested on Binder);  
-    2. A link to launch this repo in Binder. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/polsci/twitter-emotion-recognition/master)  
-    3. A notebook to run the demo (basically duplicating demo.py)  
+*** start comment ***
+This fork of https://github.com/nikicc/twitter-emotion-recognition has been updated to include:
+1. A requirements.txt file that creates a working environment (tested on Binder);  
+2. A link to launch this repo in Binder. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/polsci/twitter-emotion-recognition/master)  
+3. A notebook to run the demo (basically duplicating demo.py)  
+*** end comment ***
 
 Trained recurrent neural network (RNN) models for predicting emotions from English tweets.
 Our models work on characters hence we pass the whole tweet without any preprocessing as an input to the RNN.
