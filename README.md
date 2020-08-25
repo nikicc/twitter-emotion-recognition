@@ -1,12 +1,6 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nikicc/twitter-emotion-recognition/master?filepath=demo.ipynb)
+
 # Twitter Emotion Recognition
-
-**start comment**  
-This fork of https://github.com/nikicc/twitter-emotion-recognition has been updated to include:  
-1. A requirements.txt file that creates a working environment (tested on Binder);  
-2. A link to launch this repo in Binder. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/polsci/twitter-emotion-recognition/master)  
-3. A notebook to run the demo (basically duplicating demo.py)  
-
-**end comment**  
 
 Trained recurrent neural network (RNN) models for predicting emotions from English tweets.
 Our models work on characters hence we pass the whole tweet without any preprocessing as an input to the RNN.
@@ -15,7 +9,23 @@ We are predicting three emotion classifications:
 * Plutchik's eight basic emotions,
 * Profile of Mood States (POMS) six mood states.
 
+### Files and Folders:
+* __*demo.ipynb*__: script is showing how to use our models for predicting emotions or embedding tweets in Jupiter Notebook.
+* __*demo.py*__: script is showing how to use our models for predicting emotions or embedding tweets in Python.
+* __*emotion_prediction.py*__: helper scripts that defines EmotionPredictor class.
+* __*models/*__: contains trained RNN models.
+
 ### Example Usage
+
+#### Binder
+The easiest way to play around is to open [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nikicc/twitter-emotion-recognition/master?filepath=demo.ipynb).
+
+*Notice:* Loading a model on Binder can take some time so please be patient!
+
+#### In Jupyter Notebook
+Execute it locally using Jupyter Notebook by opening the `demo.ipynb` file.
+
+#### In Python
 The following examples show how to predict Ekman's emotions from tweet's content.
 First let's import `EmotionPredictor`.
 ```python
@@ -73,11 +83,6 @@ If you would rather just use the final hidden state representation call `embed`:
 
 [6 rows x 801 columns]
 ```
-### Files and Folders:
-* __*demo.py*__: script is showing how to use our models for predicting emotions or embedding tweets.
-* __*emotion_prediction.py*__: helper scripts that defines EmotionPredictor class.
-* __*models/*__: contains trained RNN models.
-
 ### Citing:
 
 If you use our models in a scientific publication, we would appreciate citations to the following paper:
