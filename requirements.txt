@@ -4,7 +4,7 @@ numpy==1.16.0
 pandas==0.24.1
 python-dateutil==2.8.0
 pytz==2018.9
-PyYAML==3.13
+PyYAML==5.1
 scipy==1.2.1
 six==1.12.0
 Theano==1.0.4
