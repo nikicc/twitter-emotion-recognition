@@ -1,3 +1,10 @@
-pandas
-keras==1.1.0
-theano==0.8.2
+h5py==2.9.0
+Keras==1.1.0
+numpy==1.16.0
+pandas==0.24.1
+python-dateutil==2.8.0
+pytz==2018.9
+PyYAML==3.13
+scipy==1.2.1
+six==1.12.0
+Theano==1.0.4
