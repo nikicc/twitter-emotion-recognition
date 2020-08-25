@@ -1,4 +1,10 @@
 # Twitter Emotion Recognition
+
+    ***Update*** This repo has been updated to include:
+    1. A requirements.txt file that creates a working environment (tested on Binder);  
+    2. A link to launch this repo in Binder. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/polsci/twitter-emotion-recognition/master)  
+    3. A notebook to run the demo (basically duplicating demo.py)  
+
 Trained recurrent neural network (RNN) models for predicting emotions from English tweets.
 Our models work on characters hence we pass the whole tweet without any preprocessing as an input to the RNN.
 We are predicting three emotion classifications:
@@ -18,7 +24,7 @@ Use `plutchik` to predict Plutchik's emotions or `poms` for Profile of Mood Stat
 To use models in multilabel setting instead of multiclass provide `ml` as the `setting` argument.
 ```python
 >>> model = EmotionPredictor(classification='ekman', setting='mc')
- 
+
 >>> tweets = [
     "Watching the sopranos again from start to finish!",
     "Finding out i have to go to the  dentist tomorrow",
@@ -73,4 +79,4 @@ If you would rather just use the final hidden state representation call `embed`:
 
 If you use our models in a scientific publication, we would appreciate citations to the following paper:
 
-*Colnerič, N., & Demšar, J. (2018). Emotion Recognition on Twitter: Comparative Study and Training a Unison Model. IEEE Transactions on Affective Computing, PP (99), 1. https://doi.org/10.1109/TAFFC.2018.2807817* 
+*Colnerič, N., & Demšar, J. (2018). Emotion Recognition on Twitter: Comparative Study and Training a Unison Model. IEEE Transactions on Affective Computing, PP (99), 1. https://doi.org/10.1109/TAFFC.2018.2807817*
