@@ -1,3 +1,6 @@
+import os;
+os.environ['KERAS_BACKEND'] = 'theano'
+
 import pandas as pd
 
 from emotion_predictor import EmotionPredictor
