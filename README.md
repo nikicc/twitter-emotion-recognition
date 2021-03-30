@@ -10,7 +10,7 @@ We are predicting three emotion classifications:
 * Profile of Mood States (POMS) six mood states.
 
 ### Files and Folders:
-* __*demo.ipynb*__: script is showing how to use our models for predicting emotions or embedding tweets in Jupiter Notebook.
+* __*demo.ipynb*__: script is showing how to use our models for predicting emotions or embedding tweets in Jupyter Notebook.
 * __*demo.py*__: script is showing how to use our models for predicting emotions or embedding tweets in Python.
 * __*emotion_prediction.py*__: helper scripts that defines EmotionPredictor class.
 * __*models/*__: contains trained RNN models.
