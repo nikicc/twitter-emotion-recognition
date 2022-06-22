@@ -1,6 +1,6 @@
 h5py==2.9.0
 Keras==1.1.0
-numpy==1.16.0
+numpy==1.22.0
 pandas==0.24.1
 python-dateutil==2.8.0
 pytz==2018.9
